@@ -100,13 +100,13 @@ void start()
 	//ScmPiece ScmGameTemp1, ScmGameTemp2; //a1 b1储存玩家上手坐标，c1 d1储存电脑上手坐标
 	printf("\t╔═══════════════════════════════════════════════════════════════╗\n");
 	printf("\t║                                                               ║\n");
-	printf("\t║      欢迎使用五子棋对战程序            祝您玩的愉快挑战无极限        ║\n");
+	printf("\t║      欢迎使用五子棋对战程序     祝您玩的愉快挑战无极限        ║\n");
 	printf("\t║                                                               ║\n");
 	printf("\t║                 ._______________________.                     ║\n");
 	printf("\t║                 | _____________________ |                     ║\n");
 	printf("\t║                 | I                   I |                     ║\n");
 	printf("\t║                 | I                   I |                     ║\n");
-	printf("\t║                 | I      五 子 棋      I |                     ║\n");
+	printf("\t║                 | I      五 子 棋     I |                     ║\n");
 	printf("\t║                 | I                   I |                     ║\n");
 	printf("\t║                 | I___________________I |                     ║\n");
 	printf("\t║                 !_______________________!                     ║\n");
@@ -117,16 +117,16 @@ void start()
 	printf("\t║                  !_____________________!                      ║\n");
 	printf("\t║                                                               ║\n");
 	printf("\t║                                                               ║\n");
-	printf("\t║         寒 星 溪 月 疏 星 首，花 残 二 月 并 白 莲。               ║\n");
-	printf("\t║         雨 月 金 星 追 黑 玉，松 丘 新 宵 瑞 山 腥。               ║\n");
-	printf("\t║         星 月 长 峡 恒 水 流，白 莲 垂 俏 云 浦 岚。               ║\n");
-	printf("\t║         黑 玉 银 月 倚 明 星，斜 月 明 月 堪 称 朋。               ║\n");
-	printf("\t║         二 十 六 局 先 弃 二，直 指 游 星 斜 彗 星。               ║\n");
-	printf("\t║                                                              ║\n");
-	printf("\t║                                                              ║\n");
-	printf("\t║          1.人机对战                 2.人人对战                  ║\n");
-	printf("\t║                                                              ║\n");
-	printf("\t╚══════════════════════════════════════════════════════════════╝\n");
+	printf("\t║         寒 星 溪 月 疏 星 首，花 残 二 月 并 白 莲。          ║\n");
+	printf("\t║         雨 月 金 星 追 黑 玉，松 丘 新 宵 瑞 山 腥。          ║\n");
+	printf("\t║         星 月 长 峡 恒 水 流，白 莲 垂 俏 云 浦 岚。          ║\n");
+	printf("\t║         黑 玉 银 月 倚 明 星，斜 月 明 月 堪 称 朋。          ║\n");
+	printf("\t║         二 十 六 局 先 弃 二，直 指 游 星 斜 彗 星。          ║\n");
+	printf("\t║                                                               ║\n");
+	printf("\t║                                                               ║\n");
+	printf("\t║          1.人机对战                 2.人人对战                ║\n");
+	printf("\t║                                                               ║\n");
+	printf("\t╚═══════════════════════════════════════════════════════════════╝\n");
 	printf("\t\t\t请输入1或2：");
 	while(scanf("%d",&choice), choice != 1 && choice != 2)
 	{
@@ -182,7 +182,7 @@ void start()
 							qipan[g_ScmGame2.iX][g_ScmGame2.iY] = SPA;
 							qipan[g_ScmGame1.iX][g_ScmGame1.iY] = SPA;
 							system("clear");
-							draw;
+							draw();
 							break;
 						case 'n':
 						case 'N':
@@ -225,8 +225,7 @@ void draw()//画棋盘
 			}
 			if(qipan[j][i]==COM)
 			{
-				strcpy(p[j][i],"∆
-				\0");
+				strcpy(p[j][i],"∆\0");
 			}
 		}
 	}
